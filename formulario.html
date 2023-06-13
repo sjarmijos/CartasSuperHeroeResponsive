@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Superheroes</title>
+    <link rel="stylesheet" href="./css/styleForm.css">
+</head>
+
+<body>
+    <header>
+        <p>Descuentos 20%</p>
+    </header>
+    <div class="titulo">
+        <img src="./img/Logo.png" alt="">
+        <h1>Super Héroes</h1>
+    </div>
+    <nav>
+        <ul>
+            <li>Contactame</li>
+            <li>Registro</li>
+            <li>Ingresar</li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="formulario-agregar">
+            <h1>Añade tu Super!</h1>
+            <p>Agrega tu personaje favorito completando las opciones</p>
+            <form action="./index.html" method="post">
+                <article class="datos-heroe">
+
+                    <div class="datos-generales">
+                        <label for="nombre">*Nombre</label>
+                        <input type="text" name="nombre" id="nombre" required>
+
+                        <label for="fecha">Fecha</label>
+                        <input type="date" name="fecha" id="fecha">
+
+                        <textarea name="descripcion" id="descripcion" cols="20" rows="25"
+                            placeholder="Descripción"></textarea>
+
+                    </div>
+
+                    <div class="datos-especificos">
+                        <label for="especie">*Especie</label>
+                        <select name="Especie" id="especie">
+                            <option value="Terricola">Terrícola</option>
+                            <option value="Marciano">Marciano</option>
+                            <option value="Kriptoniano">Kriptoniano</option>
+                        </select>
+
+                        <label for="foto">Agregar foto</label>
+                        <input type="file" name="foto" id="foto" accept=".jpeg, .png">
+
+                        <p class="subtitulo">Poderes</p>
+                        <label for="volar" class="txt-datos">
+                            <input type="checkbox" name="poderes" id="volar" value="volar" class="check-poderes">
+                            Vuelo
+                        </label>
+                        <label for="super-fuerza" class="txt-datos">
+                            <input type="checkbox" name="poderes" id="super-inteligencia" value="super-inteligencia"
+                                class="check-poderes">
+                            Super Inteligencia
+                        </label>
+                        <label for="vista-rayo-laser" class="txt-datos">
+                            <input type="checkbox" name="poderes" id="vista-rayo-laser" value="vista-rayo-laser"
+                                class="check-poderes">
+                            Vista de rayo láser
+                        </label>
+                        <label for="billetera" class="txt-datos">
+                            <input type="checkbox" name="poderes" id="billetera" value="billetera"
+                                class="check-poderes">
+                            Billetera gorda
+                        </label>
+                        <hr>
+                        <p class="subtitulo">Tipo de personaje</p>
+                        <label for="heroe" class="txt-datos">
+                            <input type="radio" name="tipo-personaje" id="heroe" value="Heroe" class="input-tipo">
+                            Héroe - Heroína
+                        </label>
+                        <label for="villano" class="txt-datos">
+                            <input type="radio" name="tipo-personaje" id="villano" value="Villano" class="input-tipo">
+                            Héroe - Heroína
+                        </label>
+                    </div>
+                </article>
+                <div class="boton">
+                    <button type="submit" class="boton-enviar">Añadir</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Todos los derechos reservados a FE1</p>
+        <img src="img/gitHub.svg" alt="Logo de gitHub" />
+    </footer>
+
+
+</body>
+
+</html>
