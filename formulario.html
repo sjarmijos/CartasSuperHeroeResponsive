@@ -27,12 +27,15 @@
     <main>
         <section class="formulario-agregar">
             <h1>Añade tu Super!</h1>
-            <p>Agrega tu personaje favorito completando las opciones</p>
-            <form action="./index.html" method="post">
+            <p class="instruccion">
+                Agrega tu personaje favorito completando las opciones
+                <span class="tooltip">Recuerda que todos los héroes son super!</span>
+            </p>
+            <form action="./index.html" method="get">
                 <article class="datos-heroe">
 
                     <div class="datos-generales">
-                        <label for="nombre">*Nombre</label>
+                        <label for="nombre">Nombre</label>
                         <input type="text" name="nombre" id="nombre" required>
 
                         <label for="fecha">Fecha</label>
@@ -45,7 +48,8 @@
 
                     <div class="datos-especificos">
                         <label for="especie">*Especie</label>
-                        <select name="Especie" id="especie">
+                        <select name="Especie" id="especie" required>
+                            <option value="" onselect="invalid">elija una opción</option>
                             <option value="Terricola">Terrícola</option>
                             <option value="Marciano">Marciano</option>
                             <option value="Kriptoniano">Kriptoniano</option>
@@ -82,7 +86,7 @@
                         </label>
                         <label for="villano" class="txt-datos">
                             <input type="radio" name="tipo-personaje" id="villano" value="Villano" class="input-tipo">
-                            Héroe - Heroína
+                            Villano - Villana
                         </label>
                     </div>
                 </article>

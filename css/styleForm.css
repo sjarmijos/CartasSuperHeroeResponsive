@@ -101,6 +101,9 @@ hr{
     border-radius: 13px;
     padding: 2% 4%;
     margin: 3% 0;
+    border: none;
+    resize: none;
+    outline: none;
 }
 
 #especie{
@@ -116,13 +119,59 @@ hr{
 }
 
 .check-poderes{
+    cursor: pointer;
+    background-color: #000;
+    background-image: url('../img/check.svg');
+    background-size: cover;
     height: 20px;
     width: 20px;
+    appearance: none;
+    border: 2px solid #888;
+    margin: 0 5px;
+    
 }
+.check-poderes:checked{
+    background-color: #1CD1B0;
+}
+
 .input-tipo{
-    height: 20px;
-    width: 20px;
+    appearance: none;
+    /* remove default */
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    border-radius: 12px;
+    background-color: #00000033;
+    background-image: radial-gradient( 
+        #cceeff 0%, 
+        #66ccff 15%,
+        #33bbff4d 28%, 
+        #00669900 70% );
+    background-repeat: no-repeat;
+    transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+    transform .25s cubic-bezier(.8, 0, 1, 1);
+    outline: none;
 }
+
+.input-tipo:checked {
+    transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+    transform .25s cubic-bezier(0, 0, .2, 1);
+}
+
+.input-tipo:active {
+    transform: scale(1.5);
+    transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
+}
+
+.input-tipo,
+.input-tipo:active {
+    background-position: 0 24px;
+}
+
+.input-tipo:checked {
+    background-position: 0 0;
+}
+
 
 .boton{
     display: flex;
@@ -174,3 +223,29 @@ footer img {
     right: 25px;
     width: 100px;
 }
+
+input:required:invalid{
+    border: red solid 4px;
+}
+
+input[type="text"]:hover,
+input[type="checkbox"]:hover{
+    border: 3px solid #1CD1B0;
+}
+
+.instruccion .tooltip {
+    visibility: hidden;
+    width: 300px;
+    font-size: 15px;
+    background-color: #1CD1B0;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    margin: 10px 10px;
+    position: absolute;
+    z-index: 1;
+}
+.instruccion:hover :first-child {
+    visibility: visible;
+} 

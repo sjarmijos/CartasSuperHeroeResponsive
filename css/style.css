@@ -67,6 +67,10 @@ nav>ul>li{
   font-size: 60px;
 }
 
+.botonMas:hover{
+  background-color: #001D2D;
+}
+
 section article {
   background-color: #f3f3f3;
   border-radius: 16px 16px 0 0;
