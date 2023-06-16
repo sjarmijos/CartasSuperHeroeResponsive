@@ -81,6 +81,18 @@ section article {
   align-items: center;
   position: relative;
   width: 300px;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+section article:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover){
+  filter: blur(10px);
+  transform: scale(0.9, 0.9); 
+
 }
 
 section article .contenedor {
@@ -148,6 +160,7 @@ section article button {
   margin: 25px;
   padding: 10px 30px;
 }
+
 
 /********** ESTILOS PARA EL FOOTER **********/
 
